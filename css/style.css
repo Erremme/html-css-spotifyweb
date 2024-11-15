@@ -17,7 +17,7 @@
 
    .container{
     display: flex;
-    height: calc(100% - 100px); 
+    height: calc(100% - 90px); 
    }
 
    .img-fluid{
@@ -38,26 +38,26 @@
      width: 50px;
      background-color: #000000;
      flex-shrink: 0;
-     padding: 8px 10px;
+     padding: 8px 0px;
      text-align: center;
+     overflow-y: auto;
+     
     }
 
     header .logo-large> img{
-      height: 58px;
+      height: 48px;
       padding-bottom: 24px;
+      padding-left: 10px;
     }
     
-
     header .logo-small> img{
-      height:38px;
-       padding-bottom: 10px;
-       
+      height:36px;
+       padding-bottom: 10px; 
     }
 
     header ul{
       list-style: none;
-      color: #fff;
-      
+      color: #fff;   
     }
 
     nav li> img{
@@ -65,14 +65,13 @@
     }
 
     nav ul>li:not(:last-child){
-      padding-bottom: 12px;
+      margin-bottom: 12px;
     }
 
     .header-top li{
       display: flex;
       align-items:center;
       justify-content: center;
-
     }
 
     .header-top li> span{
@@ -82,37 +81,49 @@
       padding-left: 8px;
     }
 
-    .playlist h3{
+    .section-playlist{
+      height: 80%;
+    }
+
+    .section-playlist h3{
       color: #fff;
       font-size: 14px;
-      padding-top: 28px;
-      padding-bottom: 14px;
+      margin-top: 28px;
+      margin-bottom: 14px;
+      padding-left: 10px;
     }
 
     .add-playlist{
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      overflow-y: auto;
+      height: 40%;
     }
 
-    .add-playlist :nth-child(1){
-      padding: 0px 10px;
-      font-size: 32px;
+    .new-playlist :nth-child(1){
+      padding: 0px 5px;
+      font-size: 26px;
       color: #000000;
       background-color:#a3a3a3 ;
       font-weight: 400;
+      margin-left: 10px;
     }
 
-    .add-playlist :nth-child(2){
+    .new-playlist :nth-child(2){
       color: #a3a3a3;
       font-size: 14px;
-      padding-left:8px;
-      
+      padding-left:8px;  
     }
 
-    .playlist ul>li{
+    .add-playlist ul>li{
       color:#a3a3a3;
       font-size: 12px;
-      padding-top:20px;
+      padding-top:14px;
+      padding-left: 10px;
+    }
+
+    .header-bottom{
+      padding: 0 10px;
     }
 
     .header-bottom ul>li:first-child img{
@@ -122,7 +133,7 @@
     .header-bottom ul>li:last-child img{
       height:28px;
       background-color:#808080 ;
-      border-radius: 89%;
+      border-radius: 89%;  
     }
 
     .header-bottom li{
@@ -160,7 +171,7 @@
        FOOTER
     --------------*/
     footer{
-    height: 100px;     
+    height: 90px;     
     }
 
     /*-------------------------------------------
@@ -175,8 +186,20 @@
 
       header{
         width:230px;
-        padding: 14px 20px;
+        padding: 14px 0 ;
         text-align: left;
+      }
+
+      .header-top nav li{
+        border-left: 3px solid transparent;
+      }
+
+      nav li> img{
+        padding-left: 7px;
+      }
+
+      .header-top nav ul :first-child{
+        border-color: lightgreen;
       }
 
       .header-top li{
@@ -189,10 +212,6 @@
       
       header .logo-small{
         display: none;
-      }
-
-      nav li> img{
-        height: 24px;
       }
 
       .header-bottom li{
