@@ -28,6 +28,18 @@
     display: none;
    }
 
+  ul{
+    list-style: none;
+  }
+
+  h2{
+    color: #fff;
+    text-shadow: 1px 1px 2px #141922;
+    padding-left: 16px;
+  }
+
+  
+
    /*------------
         HEADER
     --------------*/
@@ -45,7 +57,7 @@
     }
 
     header .logo-large> img{
-      height: 48px;
+      height: 64px;
       padding-bottom: 24px;
       padding-left: 10px;
     }
@@ -56,15 +68,14 @@
     }
 
     header ul{
-      list-style: none;
       color: #fff;   
     }
 
-    nav li> img{
+     header nav li> img{
       height: 22px;
     }
 
-    nav ul>li:not(:last-child){
+    header nav ul>li:not(:last-child){
       margin-bottom: 12px;
     }
 
@@ -158,14 +169,47 @@
       margin-left: 10px;
     }
 
-
        /*------------
            MAIN
        --------------*/
    main{
     flex-grow: 1;
      overflow-y: auto;
+     background-color: #141922;
    }
+
+   .upgrade{
+    height: 88px;
+    position: sticky;
+    background-color:#080b12;
+    width: calc(100% -50px);
+    margin-bottom: 20px;
+  }
+
+   .main-nav ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
+
+   .main-nav ul> li{
+    padding-bottom: 5px;
+    padding-right: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px #141922 ;
+    color: #7d7f84 ;
+    margin-bottom: 32px;
+    border-bottom: 3px solid transparent;
+   }
+
+
+
+
+
+   
+
+
 
     /*------------
        FOOTER
@@ -192,20 +236,17 @@
 
       .header-top nav li{
         border-left: 3px solid transparent;
+        justify-content: flex-start;
+      }
+
+      .header-top nav li:hover{
+        border-left: 3px solid lightgreen;
       }
 
       nav li> img{
         padding-left: 7px;
       }
-
-      .header-top nav ul :first-child{
-        border-color: lightgreen;
-      }
-
-      .header-top li{
-        justify-content: flex-start;
-      }
-
+     
       .content-invisible{
         display: inline-block;
       }
@@ -220,6 +261,11 @@
 
       .header-bottom ul>li:first-child{
         border-bottom: 2px solid #a3a3a3;
+      }
+
+      .main-nav li:hover{
+        border-bottom: 1px solid lightgreen;
+        color: #fff;
       }
 
     }
