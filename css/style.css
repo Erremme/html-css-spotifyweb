@@ -36,9 +36,18 @@
     color: #fff;
     text-shadow: 1px 1px 2px #141922;
     padding-left: 16px;
+    padding-bottom: 24px;
   }
 
-  
+  .col{
+    max-width: calc(100% / 2);
+  }
+
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 
    /*------------
         HEADER
@@ -85,6 +94,11 @@
       justify-content: center;
     }
 
+    .header-top li :hover{
+      color: #fff;
+      cursor: pointer;
+    }
+
     .header-top li> span{
       font-size: 12px;
       color:#6f6f6f ;
@@ -118,12 +132,18 @@
       background-color:#a3a3a3 ;
       font-weight: 400;
       margin-left: 10px;
+      cursor: pointer;
     }
 
     .new-playlist :nth-child(2){
       color: #a3a3a3;
       font-size: 14px;
-      padding-left:8px;  
+      padding-left:8px; 
+      cursor: pointer;
+    }
+
+    .new-playlist> *:hover{
+      color: #fff;
     }
 
     .add-playlist ul>li{
@@ -131,6 +151,11 @@
       font-size: 12px;
       padding-top:14px;
       padding-left: 10px;
+      cursor: pointer;
+    }
+
+    .add-playlist li:hover{
+      color: #fff;
     }
 
     .header-bottom{
@@ -156,6 +181,11 @@
     .header-bottom ul>li:first-child{
       margin-bottom: 10px;
       padding-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .header-bottom li:first-child :hover{
+      color:#fff;
     }
 
     .header-bottom ul>li:first-child span{
@@ -193,7 +223,7 @@
    }
 
    .main-nav ul> li{
-    padding-bottom: 5px;
+    padding-bottom: 1px;
     padding-right: 20px;
     font-size: 12px;
     font-weight: 800;
@@ -201,6 +231,64 @@
     color: #7d7f84 ;
     margin-bottom: 32px;
     border-bottom: 3px solid transparent;
+    cursor: pointer;
+   }
+
+   .main-nav ul> li:first-child{
+    text-decoration: underline lightgreen ;
+   }
+
+   .main-nav li:hover{
+     color: #fff;
+   }
+
+   .albums{
+    padding: 0 20px;
+   }
+
+   .col-album{
+    padding-right: 10px;
+   }
+
+   .img-album{
+    position: relative;
+    margin-top: 12px;
+   }
+
+   .img-under img{
+    display: block;
+   }
+
+   .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+   }
+
+   .img-album :hover + .overlay{
+    display: flex;
+   }
+
+   .details-album{
+    text-align: center;
+   }
+
+   .albums h4 {
+    color: #fff;
+    padding-top: 10px;
+   }
+
+   .albums p{
+    font-size: 14px;
+    color: #7a7d81;
    }
 
 
@@ -222,7 +310,7 @@
                RESPONSIVE DESIGN
     --------------------------------------------*/
     /*--------small-device---------------------*/
-    @media screen and (min-width:639px) {
+    @media screen and (min-width:576px) {
       
       .content-invisible{
         display: inline-block;
@@ -234,12 +322,12 @@
         text-align: left;
       }
 
-      .header-top nav li{
+      .header-top nav li {
         border-left: 3px solid transparent;
         justify-content: flex-start;
       }
 
-      .header-top nav li:hover{
+      .header-top nav li:first-child{
         border-left: 3px solid lightgreen;
       }
 
@@ -263,21 +351,25 @@
         border-bottom: 2px solid #a3a3a3;
       }
 
-      .main-nav li:hover{
-        border-bottom: 1px solid lightgreen;
-        color: #fff;
-      }
-
     }
+    
 
 
      /*------------medium device------------*/
-     @media screen and (min-width:878) {
+     @media screen and (min-width:768px) {
+
+      .col{
+        max-width: calc(100% / 4);
+      }
       
      }
 
      /*-----------large-device------------*/
-     @media screen and (min-width:1440px) {
+     @media screen and (min-width:992px) {
+
+      .col{
+        max-width: calc(100% / 6);
+      }
       
      }
 
