@@ -62,7 +62,10 @@
      padding: 8px 0px;
      text-align: center;
      overflow-y: auto;
-     
+    }
+
+    header::-webkit-scrollbar{
+      display: none;
     }
 
     header .logo-large> img{
@@ -123,6 +126,10 @@
       flex-direction: column;
       overflow-y: auto;
       height: 40%;
+    }
+
+    .add-playlist::-webkit-scrollbar{
+      display: none;
     }
 
     .new-playlist :nth-child(1){
@@ -206,6 +213,7 @@
     flex-grow: 1;
      overflow-y: auto;
      background-color: #141922;
+
    }
 
    section{
@@ -339,7 +347,8 @@
        FOOTER
     --------------*/
     footer{
-    height: 90px;     
+    height: 90px;
+    background-color:#282828 ;     
     }
 
     /*-------------------------------------------
